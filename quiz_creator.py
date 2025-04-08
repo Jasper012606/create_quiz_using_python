@@ -4,6 +4,9 @@ def quiz_maker():
         question = input("Enter the question: ")
         choices = {}
         labels = ['a', 'b', 'c', 'd']
+        for label in labels:
+            choice = input(f"Enter choice {label}: ")
+            choices[label] = choice
 #save the question, choices, and answer to a text file
 #ask the user if they want to add another question           
         while True:
