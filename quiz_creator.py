@@ -1,3 +1,4 @@
+import os
 #make a function that asks user for a question, choices for the question, and the answer
 def quiz_maker():
     while True:
@@ -10,7 +11,18 @@ def quiz_maker():
         if len(question) < 10:
             print("Question is too short. Please enter a longer question.")
             continue
-           
+             
+        #check if the file already exists
+        if os.path.exists("quiz.txt"):
+            #check if the question already exists in the file
+            with open("quiz.txt", "r") as file:
+                lines = file.readlines()
+                for line in lines:
+                    if question.lower() in line.lower():
+                        print("Question already exists. Please enter a different question.")
+                        continue
+            continue
+        
         choices = {}
         labels = ['a', 'b', 'c', 'd']
         
