@@ -2,6 +2,15 @@
 def quiz_maker():
     while True:
         question = input("Enter the question: ").capitalize()
+        
+        #check if the question is too short or empty
+        if len(question) < 10:
+            print("Question is too short. Please enter a longer question.")
+            continue
+        if question.strip() == "":
+            print("Please enter a question.")
+            continue
+        
         choices = {}
         labels = ['a', 'b', 'c', 'd']
         
