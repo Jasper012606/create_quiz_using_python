@@ -17,7 +17,12 @@ def quiz_maker():
 #save the question, choices, and answer to a text file
     #create or open a text file
         with open("quiz.txt", "a") as file:
-
+            #write the question and choices to the file
+            file.write(f"Question: {question}\n")
+            for label in labels:
+                file.write(f"{label}. {choices[label]}\n")
+            file.write(f"Correct Answer: {correct_answer}\n")
+            file.write("------------------------------\n")
 #ask the user if they want to add another question 
     #repeat until the user says no          
         while True:
