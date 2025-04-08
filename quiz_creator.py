@@ -1,7 +1,7 @@
 #make a function that asks user for a question, choices for the question, and the answer
 def quiz_maker():
     while True:
-        question = input("Enter the question: ")
+        question = input("Enter the question: ").capitalize()
         choices = {}
         labels = ['a', 'b', 'c', 'd']
         for label in labels:
@@ -15,6 +15,9 @@ def quiz_maker():
             else:
                 break
 #save the question, choices, and answer to a text file
+    #create or open a text file
+        with open("quiz.txt", "a") as file:
+
 #ask the user if they want to add another question 
     #repeat until the user says no          
         while True:
