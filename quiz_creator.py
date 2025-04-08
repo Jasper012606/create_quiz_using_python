@@ -13,6 +13,9 @@ def quiz_maker():
             elif another_question == 'n':
                 print("Exiting the quiz maker.")
                 exit()
+            else:
+                print("Invalid input. Please enter 'y' or 'n'.")
+                continue
 #repeat until the user says no
 #call the function
 quiz_maker()
