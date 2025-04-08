@@ -21,7 +21,8 @@ def quiz_maker():
             file.write(f"Question: {question}\n")
             for label in labels:
                 file.write(f"{label}. {choices[label]}\n")
-            file.write(f"Correct Answer: {correct_answer}\n")
+            index = labels.index(correct_answer)
+            file.write(f"Correct Answer: {labels[index]}. {choices[labels[index]]}\n")
             file.write("------------------------------\n")
 #ask the user if they want to add another question 
     #repeat until the user says no          
