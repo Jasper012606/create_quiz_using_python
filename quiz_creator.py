@@ -11,7 +11,10 @@ def quiz_maker():
         if len(question) < 10:
             print("Question is too short. Please enter a longer question.")
             continue
-             
+        
+        #initialize duplicate to False
+        duplicate = False
+        
         #check if the file already exists
         if os.path.exists("quiz.txt"):
             #check if the question already exists in the file
@@ -20,9 +23,15 @@ def quiz_maker():
                 for line in lines:
                     if question.lower() in line.lower():
                         print("Question already exists. Please enter a different question.")
-                        continue
+                        #set duplicate to True
+                        duplicate = True
+                        break
+                    
+        #if its true that the question exists, ask the user to enter a different question
+        if duplicate:
             continue
         
+        #else just proceed
         choices = {}
         labels = ['a', 'b', 'c', 'd']
         
