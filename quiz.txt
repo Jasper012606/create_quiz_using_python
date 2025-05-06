@@ -1,0 +1,35 @@
+Question: What is the formula for speed?
+a. distance/time
+b. displacement/time
+c. time/displacement
+d. (displacement x gravity)/time
+Correct Answer: a. distance/time
+------------------------------
+Question: What is the chemical formula of water?
+a. CO2
+b. H2O
+c. C2O
+d. O2H
+Correct Answer: b. H2O
+------------------------------
+Question: What is 3 + 6 x (5-2)?
+a. 27
+b. 43
+c. 21
+d. 31
+Correct Answer: c. 21
+------------------------------
+Question: Which came first, chicken or egg?
+a. chicken
+b. egg
+c. neither
+d. both came at the same time
+Correct Answer: b. egg
+------------------------------
+Question: Do horses have three(3) legs?
+a. Yes
+b. Yes, horses only have 3 legs
+c. No
+d. Maybe
+Correct Answer: a. Yes
+------------------------------
