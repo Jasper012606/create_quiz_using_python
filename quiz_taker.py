@@ -16,6 +16,7 @@ def load_quiz():
     total_questions = 0
     number_of_lines = 0
     
+    #look for the line that starts with "Question:"
     while number_of_lines < len(lines):
         line = lines[number_of_lines].strip()
         #check if the line starts with "Question:", proceed if true
@@ -25,6 +26,15 @@ def load_quiz():
             #print the question
             question = line.strip().replace("Question:", f"Question {total_questions}:").strip()
             print(f"\n{question}")
-            break
         
+        #make an empty dictionary to store the choices and labels
+            choices = {}
+            for i in range(1, 5):
+                labels, choice = lines[number_of_lines + i].strip().split(".", 1)
+                choices[labels.lower()] = choice
+                print(f"{labels}. {choice}")
+            
+            number_of_lines += 5
+        else:
+            number_of_lines += 1
 load_quiz()
