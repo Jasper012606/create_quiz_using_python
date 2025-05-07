@@ -25,7 +25,7 @@ def load_quiz():
             total_questions += 1
             #print the question
             question = line.strip().replace("Question:", f"Question {total_questions}:").strip()
-            print(f"\n{question}")
+            print(f"{question}")
         
         #make an empty dictionary to store the choices and labels
             choices = {}
@@ -39,7 +39,24 @@ def load_quiz():
             correct_label = correct_answer.split(":")[1].strip().split(".")[0]
             correct_choice = correct_answer.split(".")[1]
 
-            
+        #ask the user for the answer
+            #check if the answer is valid
+            while True:
+                ask_user = input ("Enter your answer (a/b/c/d): ").strip().lower()
+                #if answer is not in choices, ask the user to enter a valid answer
+                if ask_user not in choices:
+                    print("Invalid answer. Please choose among the choices (a/b/c/d) only.")
+                    continue
+                #if answer is valid and correct, add 1 to the score and prooceed to the next question
+                if ask_user == correct_label:
+                    print(f"Correct!✅\n")
+                    score += 1
+                    break
+                #if answer is wrong, print the correct answer and proceed to the next question
+                else:
+                    print(f"Wrong!❌ The correct answer is {correct_label}.{correct_choice}")
+                    break
+                
             #Add 5 to the number of lines to move to the next question
             number_of_lines += 5
             
