@@ -63,4 +63,14 @@ def load_quiz():
         #if the line does not start with "Question:", skip the line
         else:
             number_of_lines += 1
+    
+    #print the score and total questions
+    if score == 0:
+        print(f"Your score is {score} out of {total_questions}. Better luck next time!")
+    elif score == total_questions:
+        print(f"You got a perfect score of {score} out of {total_questions}! Hooray! 🎉")
+    else:
+        print(f"Your score is {score} out of {total_questions}. Good job!")
+
+#run the quiz
 load_quiz()
