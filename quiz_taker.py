@@ -34,7 +34,16 @@ def load_quiz():
                 choices[labels.lower()] = choice
                 print(f"{labels}. {choice}")
             
+            #look for the correct answer in the file
+            correct_answer = lines[number_of_lines + 5]
+            correct_label = correct_answer.split(":")[1].strip().split(".")[0]
+            correct_choice = correct_answer.split(".")[1]
+
+            
+            #Add 5 to the number of lines to move to the next question
             number_of_lines += 5
+            
+        #if the line does not start with "Question:", skip the line
         else:
             number_of_lines += 1
 load_quiz()
