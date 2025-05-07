@@ -1,3 +1,5 @@
+from playsound import playsound
+
 #make a function that loads and runs the quiz file
 def load_quiz():
     #check if the file exists
@@ -50,11 +52,13 @@ def load_quiz():
                 #if answer is valid and correct, add 1 to the score and prooceed to the next question
                 if ask_user == correct_label:
                     print(f"Correct!✅\n")
+                    playsound("sounds/correct.mp3")
                     score += 1
                     break
                 #if answer is wrong, print the correct answer and proceed to the next question
                 else:
                     print(f"Wrong!❌ The correct answer is {correct_label}.{correct_choice}")
+                    playsound("sounds/bruh.mp3")
                     break
                 
             #Add 5 to the number of lines to move to the next question
@@ -67,10 +71,13 @@ def load_quiz():
     #print the score and total questions
     if score == 0:
         print(f"Your score is {score} out of {total_questions}. Better luck next time!")
+        playsound("sounds/ok_lang_yan_perd.mp3")
     elif score == total_questions:
         print(f"You got a perfect score of {score} out of {total_questions}! Hooray! 🎉")
+        playsound("sounds/chinese_music.mp3")
     else:
         print(f"Your score is {score} out of {total_questions}. Good job!")
+        playsound("sounds/Yay.mp3")
 
 #run the quiz
 load_quiz()
